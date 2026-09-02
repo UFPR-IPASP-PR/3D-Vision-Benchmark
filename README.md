@@ -49,8 +49,10 @@ Code for reproducing the benchmark results from our SIBGRAPI 2026 paper.
    cd <cloned repo>
    pip install -e .
    ```
+The official repositories for each model can be found at:
 
 | Model | Official Repository |
+| --- | --- |
 | dinov1 | [GitHub](https://github.com/facebookresearch/dino) |
 | dinov2 | [GitHub](https://github.com/facebookresearch/dinov2) |
 | dinov3 | [GitHub](https://github.com/facebookresearch/dinov3) |
