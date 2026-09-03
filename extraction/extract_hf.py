@@ -306,7 +306,7 @@ def build_parser():
     p_dino3 = sub.add_parser("dinov3", help="facebook/dinov3-vitl16-pretrain-lvd1689m")
     p_dino3.add_argument("--input_dir", required=True, help="Folder containing images")
     p_dino3.add_argument("--output_file", required=True, help="Path to save .npz file")
-    p_dino3.add_argument("--model_id", default="facebook/dinov3-vitl16-pretrain-lvd1689", help="Hugging Face model ID")
+    p_dino3.add_argument("--model_id", default="facebook/dinov3-vitl16-pretrain-lvd1689m", help="Hugging Face model ID")
 >>>>>>> Stashed changes
     p_dino3.add_argument("--token", default=None, help="Path to HF token file (optional)")
     p_dino3.add_argument("--mode", choices=["cls", "cls_avg"], default="cls_avg")
