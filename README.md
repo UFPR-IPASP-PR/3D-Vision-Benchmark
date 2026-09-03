@@ -112,8 +112,7 @@ This repo uses **two kinds of environments**:
   pip install -r requirements.txt
   ```
 
-  See `requirements.txt` for notes on a couple of packages that couldn't be
-  reliably pinned from the source pip freeze.
+  See `requirements.txt`. We recommend Python 3.10.20, as that was the version utilized.
 
 ## Usage Instructions
 
