@@ -58,6 +58,11 @@ def save_features(output_file, features, filenames):
     print("-" * 40)
     print("Extraction complete.")
     print(f"Features shape: {final_features.shape}")
+
+    output_dir = os.path.dirname(output_file)
+    if output_dir:
+        os.makedirs(output_dir, exist_ok=True)
+
     print(f"Saving to {output_file}...")
     np.savez_compressed(output_file, features=final_features, filenames=final_filenames)
     print("Done.")
@@ -292,10 +297,17 @@ def build_parser():
     p_dino1.add_argument("--num_workers", type=int, default=4)
 
     # --- dinov3 ---
+<<<<<<< Updated upstream
     p_dino3 = sub.add_parser("dinov3", help="facebook/ddinov3-vitl16-pretrain-lvd1689m")
     p_dino3.add_argument("--input_dir", required=True, help="Folder containing images")
     p_dino3.add_argument("--output_file", required=True, help="Path to save .npz file")
     p_dino3.add_argument("--model_id", default="facebook/dinov3-vitl16-pretrain-lvd1689m", help="Hugging Face model ID")
+=======
+    p_dino3 = sub.add_parser("dinov3", help="facebook/dinov3-vitl16-pretrain-lvd1689m")
+    p_dino3.add_argument("--input_dir", required=True, help="Folder containing images")
+    p_dino3.add_argument("--output_file", required=True, help="Path to save .npz file")
+    p_dino3.add_argument("--model_id", default="facebook/dinov3-vitl16-pretrain-lvd1689", help="Hugging Face model ID")
+>>>>>>> Stashed changes
     p_dino3.add_argument("--token", default=None, help="Path to HF token file (optional)")
     p_dino3.add_argument("--mode", choices=["cls", "cls_avg"], default="cls_avg")
     p_dino3.add_argument("--batch_size", type=int, default=32)
