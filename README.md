@@ -86,7 +86,7 @@ The official repositories for each model can be found at:
 |---|---|---|
 | dinov1 | `facebook/dino-vitb8` | HF Hub |
 | dinov2 | `ViT-L/14 distilled w/ Registers` | [GitHub](https://github.com/facebookresearch/dinov2) |
-| dinov3 | `dinov3-vit7b16-pretrain-lvd1689m`| HF Hub |
+| dinov3 | `dinov3-vitl16-pretrain-lvd1689m`| HF Hub |
 | sam3 | `facebook/sam3` | HF Hub |
 | dust3r | `DUSt3R_ViTLarge_BaseDecoder_512_dpt.pth` | [GitHub](https://github.com/naver/dust3r#checkpoints) |
 | mast3r | `MASt3R_ViTLarge_BaseDecoder_512_catmlpdpt_metric.pth` | [GitHub](https://github.com/naver/mast3r#checkpoints) |
