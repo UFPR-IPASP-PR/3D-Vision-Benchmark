@@ -4,15 +4,9 @@ extract_hf.py
 
 Unified feature extractor for the three models:
 
-    dino_v1  – facebook/dino-vitb8            (generic AutoModel ViT)
-    dinov3   – facebook/dinov3-vit7b16-...     (generic AutoModel ViT, same
-                                                 code path as dino_v1, just a
-                                                 different default model id
-                                                 and register-token count)
-    sam3     – facebook/sam3                   (Sam3Model vision encoder,
-                                                 different forward pass /
-                                                 pooling, kept as its own
-                                                 code path)
+    dino_v1  – facebook/dino-vitb8            
+    dinov3   – facebook/dinov3-vitl16-pretrain-lvd1689m     
+    sam3     – facebook/sam3                   
 
 Each model is a subcommand. 
 
@@ -26,7 +20,7 @@ python extract_hf.py dino_v1 \
 python extract_hf.py dinov3 \
     --input_dir  data/images \
     --output_file features/dinov3_cls_avg.npz \
-    --model_id facebook/dinov3-vit7b16-pretrain-lvd1689m \
+    --model_id facebook/dinov3-vitl16-pretrain-lvd1689m \
     --mode cls_avg
 
 python extract_hf.py sam3 \
@@ -70,9 +64,7 @@ def save_features(output_file, features, filenames):
 
 
 # ─────────────────────────────────────────────────────────────────────────────
-# dino_v1 / dinov3 — generic AutoModel ViT path
-# (identical code in both original scripts; only the default model id and
-#  the register-token fallback differed)
+# dino_v1 / dinov3
 # ─────────────────────────────────────────────────────────────────────────────
 
 class ViTImageDataset(Dataset):
@@ -300,10 +292,10 @@ def build_parser():
     p_dino1.add_argument("--num_workers", type=int, default=4)
 
     # --- dinov3 ---
-    p_dino3 = sub.add_parser("dinov3", help="facebook/dinov3-vit7b16-pretrain-lvd1689m")
+    p_dino3 = sub.add_parser("dinov3", help="facebook/ddinov3-vitl16-pretrain-lvd1689m")
     p_dino3.add_argument("--input_dir", required=True, help="Folder containing images")
     p_dino3.add_argument("--output_file", required=True, help="Path to save .npz file")
-    p_dino3.add_argument("--model_id", default="facebook/dinov3-vit7b16-pretrain-lvd1689m", help="Hugging Face model ID")
+    p_dino3.add_argument("--model_id", default="facebook/dinov3-vitl16-pretrain-lvd1689m", help="Hugging Face model ID")
     p_dino3.add_argument("--token", default=None, help="Path to HF token file (optional)")
     p_dino3.add_argument("--mode", choices=["cls", "cls_avg"], default="cls_avg")
     p_dino3.add_argument("--batch_size", type=int, default=32)
