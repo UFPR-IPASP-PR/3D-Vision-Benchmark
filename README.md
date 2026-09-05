@@ -1,7 +1,21 @@
 # 3D-Vision-Benchmark
 
-Code for reproducing the benchmark results from our SIBGRAPI 2026 paper.
+Repository containing the code for reproducing the benchmark results of our SIBGRAPI 2026 paper [Evaluating 2D and 3D-Aware Vision Foundation Models for Vehicle Attribute Recognition](https://arxiv.org/abs/2608.29929).
 
+Cite as 
+```
+@article{delazeri2026evaluating,
+  title = {Evaluating {2D} and {3D}-Aware Vision Foundation Models for Vehicle Attribute Recognition},
+  author = {Alexandre V. {Delazeri} and Gabriel E. {Lima} and Eduil {Nascimento Jr.} and Rayson {Laroca} and David {Menotti}},
+  year = {2026},
+  journal = {Conference on Graphics, Patterns and Images (SIBGRAPI)},
+  volume = {},
+  number = {},
+  pages = {1-6},
+  doi = {},
+  issn = {},
+}
+```
 <!-- TODO (stage 4): one-paragraph description of what this benchmark measures
      and a link to the paper once available. -->
 
