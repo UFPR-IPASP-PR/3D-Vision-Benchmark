@@ -25,34 +25,6 @@ If you find this repository useful in your research, please cite our paper:
 
 ## Repository structure
 
-```
-3D-Vision-Benchmark/
-├── extraction/                  # Per-model feature extraction scripts
-│   ├── extract_hf.py            # dino_v1, dinov3, sam3 (HuggingFace-only, no repo to clone)
-│   ├── dust3r/
-│   ├── depth-anything-3/
-│   ├── Depth-Anything/          # (v1, + DINOv2)
-│   ├── DepthAnything-V2/
-│   ├── sam-3d-objects/
-│   ├── Hunyuan3D-2.1/
-│   ├── mast3r/
-│   ├── crocov2/
-│   └── ibot/
-├── training/                    
-│   ├── single_feature_experiments.py
-│   ├── feature_fusion_run_experiments.py
-│   └── run_ood_experiment.py
-└── scripts/
-    ├── run_experiments.sh        
-    └── configs/                  
-        ├── dino_single.sh
-        ├── multi_attr.sh
-        ├── ibot.sh
-        ├── dinov2_da.sh
-        ├── naver_encoders.sh
-        └── various_backbones.sh
-```
-
 > **Note:** `extraction/<model>/` folders hold only *our* extraction script for
 > that model — they are not the cloned upstream repos. See "Setup" below.
 
@@ -136,7 +108,8 @@ This repo uses **two kinds of environments**:
 
 Clone and install the dependencies of each model, following official instructions.
 
-Place the relevant extraction script alongside the cloned repo and run it, saving
-the features each to its own folder (or file, for `dinov3` and `sam3`, via `extract_hf.py`).
+Place the relevant extraction script on the folder and run it, saving the features each to its own folder (or file, for dinov3 and sam3).
 
-Edit the launcher scripts under `scripts/` to point to your feature folders, then run.
+Edit the run_parallel_* scripts to point to the folders
+
+Run
