@@ -1,8 +1,12 @@
 # 3D-Vision-Benchmark
+This repository contains the code and resources required to reproduce the benchmark results presented in our SIBGRAPI 2026 paper, [Evaluating 2D and 3D-Aware Vision Foundation Models for Vehicle Attribute Recognition](https://arxiv.org/abs/2608.29929).
 
-Repository containing the code for reproducing the benchmark results of our SIBGRAPI 2026 paper [Evaluating 2D and 3D-Aware Vision Foundation Models for Vehicle Attribute Recognition](https://arxiv.org/abs/2608.29929).
+## About the benchmark
+Our work investigates the effectiveness of vision foundation models for vehicle attribute recognition. The benchmark provides a systematic assessment of the performance of 14 different state-of-the-art models across three vehicle recognition tasks: type, make, and model classification. We evaluate the models as frozen feature extractors using linear probing and further assess their robustness under few-shot learning and out-of-distribution (OOD) domain shifts. In particular, we investigate whether incorporating 3D information into the learned representations provides an advantage over conventional 2D vision foundation models. 
 
-Cite as 
+## Citation
+If you find this repository useful in your research, please cite our paper:
+
 ```
 @article{delazeri2026evaluating,
   title = {Evaluating {2D} and {3D}-Aware Vision Foundation Models for Vehicle Attribute Recognition},
