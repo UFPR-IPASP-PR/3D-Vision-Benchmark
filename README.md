@@ -1,6 +1,20 @@
 # 3D-Vision-Benchmark
-Repository for reproducing our benchmark results.
+Repository containing the code for reproducing the benchmark results of our paper [Evaluating 2D and 3D-Aware Vision Foundation Models for Vehicle Attribute Recognition](https://arxiv.org/abs/2608.29929).
 
+Cite as 
+```
+@article{delazeri2026evaluating,
+  title = {Evaluating {2D} and {3D}-Aware Vision Foundation Models for Vehicle Attribute Recognition},
+  author = {Alexandre V. {Delazeri} and Gabriel E. {Lima} and Eduil {Nascimento Jr.} and Rayson {Laroca} and David {Menotti}},
+  year = {2026},
+  journal = {Conference on Graphics, Patterns and Images (SIBGRAPI)},
+  volume = {},
+  number = {},
+  pages = {1-6},
+  doi = {},
+  issn = {},
+}
+```
 More detailed usage instructions to be made available soon.
 
 # Usage Instructions
